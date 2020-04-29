@@ -40,27 +40,6 @@ html {
     color: var(--var-light);
 }
 
-.khaki {
-    background-color: var(--var-khaki);
-}
-
-.avocado {
-    color: var(--var-avocado);
-}
-
-.cream {
-    color: var(--var-cream);
-}
-
-.tacao {
-    color: var(--var-tacao);
-}
-
-.brick {
-    color: var(--var-brick);
-}
-
-
 /* BACKGROUNDS */
 
 .bg-black {
@@ -178,7 +157,7 @@ tr,
 td,
 textarea,
 hr {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     outline: 0;
     color: #000;
@@ -196,52 +175,6 @@ input:focus,
 textarea:focus {
     outline: 0;
 }
-
-
-/*FORMS*/
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-
-input {
-    height: 2.5rem;
-}
-
-input:focus,
-textarea:focus {
-    border: 1px solid var(--var-khaki);
-}
-
-textarea {
-    padding-top: .5rem;
-}
-
-textarea,
-input {
-    height: 3.5rem;
-    resize: none;
-    border: 1px solid var(--var-light);
-    -webkit-appearance: none;
-    padding-left: .5rem;
-    border-radius: .5rem;
-}
-
-label {
-    margin-bottom: 1rem;
-}
-
-input[type="checkbox"] {
-    transform: scale(2);
-}
-
-label {
-    margin-bottom: .5rem;
-}
-
 
 /*BREAKPOINTS TYPO*/
 
@@ -364,13 +297,9 @@ footer {
 /* COLUMNS & ROWS*/
 
 .col {
-    min-height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
-
 .row-no-wrap {
     height: 100%;
     width: 100%;
@@ -456,26 +385,33 @@ footer {
 /*JUSTIFY CONTENT*/
 
 .justify-content-center {
+    display: flex;
     justify-content: center;
 }
 
 .justify-content-end {
+    display: flex;
     justify-content: end;
 }
 
 .justify-content-space-between {
+    display: flex;
     justify-content: space-between;
 }
 
 .justify-content-evenly {
+    display: flex;
     justify-content: space-evenly;
 }
 
 .justify-content-around {
+    display: flex;
     justify-content: space-around;
 }
-
-
+/* TEXT ALIGN CENTRE */
+.text-align-center {
+    text-align: center;
+}
 /*ALIGN ITEMS*/
 
 .align-items-center {
@@ -1300,7 +1236,9 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
+.margin-top-10 {
+    margin-top: 10rem;
+}
 
 /*TRANSFORM REDUCE OR SCALE*/
 
@@ -1434,186 +1372,6 @@ footer {
     z-index: 30000;
 }
 
-
-/*ANIMATION UTILITIES*/
-
-.hover-scale:hover {
-    transform: scale(1.1);
-    transition: .25s;
-}
-
-.hover-rotate-left:hover {
-    transform: rotate(-5deg);
-    cursor: pointer;
-    transition: 1s;
-}
-
-.hover-rotate-right:hover {
-    transform: rotate(5deg);
-    cursor: pointer;
-    transition: 1s;
-}
-
-.hover-translate-bottom-top:hover {
-    transform: translateY(-.5rem);
-}
-
-.hover-translate-top-bottom:hover {
-    transform: translateY(.5rem);
-}
-
-.hover-translate-left-right:hover {
-    transform: translateX(-.5rem);
-}
-
-.hover-translate-right-left:hover {
-    transform: translateX(.5rem);
-}
-
-
-/*MODAL FADE*/
-
-#modal-fade {
-    position: fixed;
-    height: 0;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(235, 235, 235, 0.85);
-    transition: height .5s ease-in-out;
-    z-index: 50000;
-}
-
-.modal-content {
-    position: absolute;
-    display: none;
-    min-height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#close-modal {
-    height: 2rem;
-    width: 2rem;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
-}
-
-#close-modal:hover {
-    opacity: .5;
-}
-
-#newsletter_sucription_call {
-    background-color: var(--var-light);
-    margin: 4rem;
-    position: relative;
-}
-
-#newsletter_sucription_call input,
-#newsletter_sucription_call button {
-    height: 4rem;
-}
-
-.message-send-left {
-    height: 6rem;
-    width: 6rem;
-    position: absolute;
-    top: -2rem;
-    left: 1rem;
-    animation: scale 3s ease-in-out none infinite normal;
-}
-
-.message-send-right {
-    height: 6rem;
-    width: 6rem;
-    position: absolute;
-    bottom: 1rem;
-    right: 2rem;
-    animation: scale 3s ease-in-out none infinite normal;
-}
-
-@keyframes scale {
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-
-/* CARDS */
-
-.card {
-    width: 375px;
-    height: 500px;
-    margin: 2rem;
-    -webkit-box-shadow: 0px 0px 28px -13px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 28px -13px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 28px -13px rgba(0, 0, 0, 0.75);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.card-appear {
-    position: absolute;
-    height: 0;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: height .5s ease-in-out;
-    border-radius: .5rem;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.card-appear p {
-    margin: 2rem;
-    text-align: center;
-}
-
-.card-appear a {
-    margin-top: 2rem;
-}
-
-.card:hover .card-appear {
-    height: 66%;
-    background-color: rgba(235, 235, 235, 0.80);
-    border-radius: .5rem;
-}
-
-.card:hover img {
-    filter: none;
-}
-
-.card.full {
-    width: 300%;
-}
-
-
-/*INFOS TOOLTIP*/
-
-.info-tooltip {
-    width: 20rem;
-    position: absolute;
-    top: 0;
-    right: -22rem;
-    background-color: var(--var-khaki);
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-tooltip p {
-    font-size: 1rem;
-}
 
 /* NAVIGATION */
 
@@ -1755,9 +1513,6 @@ footer a:hover {
 /*MD BREAKPOINT*/
 
 @media screen and (max-width:1280px) {
-    html {
-        font-size: calc(var(--base-font-size)*1.7);
-    }
     .nav-links ul li a {
         font-size: calc(var(--base-font-size)*2.5);
     }
@@ -1853,3 +1608,19 @@ footer a:hover {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    --base-font-size: 8px;
+    --var-color-base: black;
+    font-family: 'Lato', sans-serif;
+}
+
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
